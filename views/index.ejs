@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact us Page</title>
+</head>
+<style type="text/css">
+body{
+    background-color:rgb(196, 188, 188);
+    font-style:italic;
+}
+label{
+    font-size:35px;
+}
+h1{
+    color:rgb(50, 10, 228);
+}
+input{
+    height:30px;
+    width:40%;
+}
+#name{
+    margin-left:140px;
+    
+}
+#email{
+    margin-left:140px;
+    margin-top:20px;
+}
+#mobilenumb{
+    margin-top:20px;
+}
+#subject{
+    margin-left:118px;
+    margin-top:20px;
+}
+#message{
+    margin-left:100px;  
+    margin-top:20px;
+    height:80px; 
+}
+#button{
+  background-color: #4CAF50; /* Green */
+  border:none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin:40px 40px ;
+ 
+}
+.error{
+    color:firebrick;
+}
+</style>
+<body>
+    <h1 >Contact Us</h1>
+    <form id="wrapper" action="/" method="POST">
+        <label >Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name.."><br>
+        <div class="error"id ="error1"></div>
+        <label>Email:</label>
+        <input type="text" id="email" name="email" placeholder="Your email id.."><br>
+        <div class="error"id ="error2"></div>
+        <label>Mobile Number:</label>
+        <input type="number" id="mobilenumb" name="mobilenumb" placeholder="Your Mobile number.."><br>
+        <div class="error"id ="error3"></div>
+        <label>Subject:</label>
+        <input type="text" id="subject" name="subject" placeholder="Your subject.."><br>
+        <div class="error" id ="error4"></div>
+        <label>Message:</label>
+        <input type="text" id="message" name="message" placeholder="Your message.."><br>
+        <div class="error"id ="error5"></div>
+        <button id="button"> Submit</button>
+        
+    </form>
+    <script type="text/javascript">
+    
+        var p = document.getElementById("button");
+        // NOTE: showAlert(); or showAlert(param); will NOT work here.
+        // Must be a reference to a function name, not a function call.
+        p.onclick = showAlert;
+      
+
+      function showAlert(event) {
+        var error="";
+        if(document.getElementById("name").value==""){
+            document.getElementById('error1').innerHTML="*Please enter a username*";
+        }
+        if(document.getElementById("email").value==""){
+            document.getElementById('error2').innerHTML="*Please enter a Email*";
+        }
+        if(document.getElementById("mobilenumb").value==""){
+            document.getElementById('error3').innerHTML="*Please enter a Mobile Number *";
+        }
+        if(document.getElementById("subject").value==""){
+            document.getElementById('error4').innerHTML="*Please enter a subject *";
+        }
+        if(document.getElementById("message").value==""){
+            document.getElementById('error5').innerHTML="*Please enter a message*";
+        }
+
+
+      }
+    </script>
+</body>
+</html>
