@@ -30,7 +30,7 @@ app.post("/",function(req,res){
     //     res.send("error");
         
     // }
-    console.log("Blank")
+    
 
 })
 app.listen(3000, function () {
